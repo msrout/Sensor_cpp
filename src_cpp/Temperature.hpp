@@ -7,7 +7,7 @@ enum class TempState { OK, WARN, CRIT };
 class Temperature
 {
 public:
-    explicit Temperature(HwRev rev) : hwRev_(rev) {}
+    Temperature(HwRev rev) : hwRev_(rev) {}
     int16_t convert(uint16_t raw) const;
     TempState evaluate(int16_t tempX10) const;
 

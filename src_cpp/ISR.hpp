@@ -1,11 +1,12 @@
 #pragma once
 #include <cstdint>
+#include <stdbool.h>
 
 class ISR
 {
 public:
     static void timerISR();
 
-    static inline uint16_t adcRaw = 0;
-    static inline bool sampleReady = false;
+    static volatile uint16_t adcRaw;
+    static volatile bool sampleReady;
 };

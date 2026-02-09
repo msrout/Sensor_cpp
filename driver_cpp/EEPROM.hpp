@@ -6,7 +6,7 @@ enum class HwRev { A, B };
 class EEPROM
 {
 public:
-    explicit EEPROM(I2C& i2c) : i2c_(i2c) {}
+    EEPROM(I2C& i2c) : i2c_(i2c) {}
     HwRev readHwRevision();
 
 private:

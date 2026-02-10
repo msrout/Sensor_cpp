@@ -4,7 +4,7 @@
 class Config
 {
 public:
-    explicit Config(EEPROM& eeprom);
+    Config(EEPROM& eeprom);
 
     void init();
     HwRev hwRevision() const;
